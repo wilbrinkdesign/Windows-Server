@@ -1,0 +1,7 @@
+KMS vs. AD based authentication:
+	1. AD is HA
+	2. AD heeft geen threshold voor het aantal activaties die eerst plaats moeten vinden
+	3. AD heeft geen SRV + poort nodig voor het activeren
+	4. AD kan alleen Server 2012 > activeren
+
+Je hebt een Generic Volume License Key (GVLK) nodig (voorheen KMS key) om een licentie op te halen bij je KMS host. Een volume licensing editie van Windows Server/client heeft dit al aan boord (VLSC portal van Microsoft)

@@ -1,0 +1,2 @@
+# Task Schedular aanmaken met powershell.exe als programma en de rest als parameter
+powershell.exe -Command "&{ Get-ChildItem IIS:\AppPools | Where-Object State -eq "Stopped" | Start-WebAppPool }"
