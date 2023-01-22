@@ -8,4 +8,4 @@
 6. IIS => Set Application Pool credentials <domain>\<user>
 7. AD => Set AD user Delegation tab => Trust this user for delegation to any service (Kerberos only)
 
-(Kerberos for IIS manual)[https://techcommunity.microsoft.com/t5/iis-support-blog/setting-up-kerberos-authentication-for-a-website-in-iis/ba-p/347882]
+[Kerberos for IIS manual](https://techcommunity.microsoft.com/t5/iis-support-blog/setting-up-kerberos-authentication-for-a-website-in-iis/ba-p/347882)
