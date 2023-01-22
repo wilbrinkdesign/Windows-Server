@@ -5,7 +5,7 @@
 Priority=Default
 
 [Default]
-UserDomain=test.local
+UserDomain=<domain>
 UserID=<service_Account>
 UserPassword=<password>
 SkipBDDWelcome=YES
