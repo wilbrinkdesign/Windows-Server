@@ -7,7 +7,7 @@ Get-WsusUpdate -Classification WSUS -Approval Unapproved -Status Any | Approve-W
 Get-WsusUpdate -Classification All -Approval Unapproved -Status Any | Approve-WsusUpdate -Action Install -TargetGroupName "All Computers"
 ```
 
-### Approve auto
+### Auto approve WSUS updates
 
 ```powershell
 $Updates = Get-WsusUpdate -Approval Approved -Status Any | Where-Object { $_.update.title -notlike "*Feature*" }
