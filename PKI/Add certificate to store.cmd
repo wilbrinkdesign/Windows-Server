@@ -1,1 +1,0 @@
-certutil -addstore -enterprise -f -v root ROOT_CERT.crt
