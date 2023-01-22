@@ -1,5 +1,5 @@
 ### Add certificate to ROOT store
 
 ```cmd
-certutil -addstore -enterprise -f -v root ROOT_CERT.crt
+certutil -addstore -enterprise -f -v root <cert>
 ```
