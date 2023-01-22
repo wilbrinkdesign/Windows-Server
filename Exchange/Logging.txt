@@ -1,2 +1,0 @@
-Front End Transport service (interne mailstroom => connector): %ExchangeInstallPath%TransportRoles\Logs\FrontEnd\AgentLog
-Transport service (extern mailstroom connector => naar buiten): %ExchangeInstallPath%TransportRoles\Logs\Hub\AgentLog
