@@ -1,16 +1,21 @@
-# Approve WSUS updates
+### Approve WSUS updates
+
+```powershell
 Get-WsusUpdate -Classification Critical -Approval Unapproved -Status Any | Approve-WsusUpdate -Action Install -TargetGroupName "All Computers"
 Get-WsusUpdate -Classification Security -Approval Unapproved -Status Any | Approve-WsusUpdate -Action Install -TargetGroupName "All Computers"
 Get-WsusUpdate -Classification WSUS -Approval Unapproved -Status Any | Approve-WsusUpdate -Action Install -TargetGroupName "All Computers"
 Get-WsusUpdate -Classification All -Approval Unapproved -Status Any | Approve-WsusUpdate -Action Install -TargetGroupName "All Computers"
+```
 
-# Approve automatisch
-$Updates = Get-WsusUpdate -Approval Approved -Status Any | Where { $_.update.title -notlike "*Onderdelenupdate*" }
+### Approve auto
 
-$Groepen = @("FAT", "Laptops")
+```powershell
+$Updates = Get-WsusUpdate -Approval Approved -Status Any | Where-Object { $_.update.title -notlike "*Feature*" }
 
-Foreach ($Groep In $Groepen)
+$Groups = @("<group1>", "<group2>")
+
+Foreach ($Grup In $Groups)
 {
-	Write-Host "De updates worden nu goedgekeurd voor de groep $Groep..." -ForeGroundColor YELLOW
 	$Updates | Approve-WsusUpdate -Action Install -TargetGroupName $Groep
 }
+```
