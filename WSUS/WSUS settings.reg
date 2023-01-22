@@ -4,8 +4,8 @@ Windows Registry Editor Version 5.00
 "ElevateNonAdmins"=dword:00000000
 "TargetGroupEnabled"=dword:00000001
 "TargetGroup"="FAT"
-"WUServer"="http://wsussrv01.ssc.vsws.lan:8530"
-"WUStatusServer"="http://wsussrv01.ssc.vsws.lan:8530"
+"WUServer"="http://<wsus_server>:8530"
+"WUStatusServer"="http://<wsus_server>:8530"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
 "NoAutoUpdate"=dword:00000000
