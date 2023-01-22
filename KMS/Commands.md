@@ -1,40 +1,40 @@
-### Check Activation Status
+### Check activation status
 
 ```cmd
 slmgr /xpr
 ```
 
-### View Current License Info
+### View current license info
 
 ```cmd
 slmgr /dli
 ```
 
-### View Detailed License Info
+### View detailed license info
 
 ```cmd
 slmgr /dlv
 ```
 
-### Reset Activation Timers
+### Reset activation timers
 
 ```cmd
 slmgr /rearm
 ```
 
-### Remove Windows Product Key
+### Remove Windows product key
 
 ```cmd
 slmgr /cpky
 ```
 
-### Activate Windows Online
+### Activate Windows online
 
 ```cmd
 slmgr /ato
 ```
 
-### Change Windows Product Key
+### Change Windows product key
 
 ```cmd
 slmgr /ipk <key>
@@ -53,7 +53,7 @@ slmgr /skms <server>
 slmgr /skms-domain <domain>
 ```
 
-### Get License Info from Cmd
+### Get license info from cmd
 
 ```cmd
 cscript C:\windows\system32\slmgr.vbs /dlv
