@@ -12,7 +12,7 @@ PowerShell module: [PSWindowsUpdates](https://www.powershellgallery.com/packages
 ### Script 4 remote PowerShell Windows Updates
 
 ```powershell
-Import-Csv .\Servers.txt -Header Server | ForEach-Object {
+Import-Csv <csv_file> -Header Server | ForEach-Object {
 	Invoke-Command -ComputerName $_.Server -ScriptBlock {     
 		$Computername = $env:COMPUTERNAME
 		$OS_Versie = [System.Environment]::OSVersion.Version.Build
