@@ -14,8 +14,8 @@ $Updates = Get-WsusUpdate -Approval Approved -Status Any | Where-Object { $_.upd
 
 $Groups = @("<group1>", "<group2>")
 
-Foreach ($Grup In $Groups)
+Foreach ($Group In $Groups)
 {
-	$Updates | Approve-WsusUpdate -Action Install -TargetGroupName $Groep
+	$Updates | Approve-WsusUpdate -Action Install -TargetGroupName $Group
 }
 ```
