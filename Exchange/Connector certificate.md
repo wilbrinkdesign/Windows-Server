@@ -19,3 +19,9 @@ $tls = "<i>$($cert.Issuer)<s>$($cert.Subject)"
 Set-SendConnector "<connector>" -TlsCertificateName $tls
 Restart-Service MSExchangeTransport
 ```
+
+### Restart Transport service after activating certificate
+
+```powershell
+Restart-Service MSExchangeTransport
+```
