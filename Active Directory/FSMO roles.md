@@ -8,8 +8,8 @@ netdom query fsmo
 
 ```powershell
 # Gracefully
-Move-ADDirectoryServerOperationMasterRole -Identity NewDC -OperationMasterRole 0,1,2,3,4
+Move-ADDirectoryServerOperationMasterRole -Identity <domain_controller> -OperationMasterRole 0,1,2,3,4
 
 # Seize
-Move-ADDirectoryServerOperationMasterRole -Identity NewDC -OperationMasterRole 0,1,2,3,4 -Force
+Move-ADDirectoryServerOperationMasterRole -Identity <domain_controller> -OperationMasterRole 0,1,2,3,4 -Force
 ```
