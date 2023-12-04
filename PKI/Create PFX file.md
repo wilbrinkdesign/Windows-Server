@@ -1,6 +1,6 @@
 [Get a free certificate](https://getacert.com/signacert.html)
 
-### Create certificate request (CSR)
+### Convert certificate to PFX file
 
 ```powershell
 $Password = "<password>"
