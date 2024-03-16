@@ -25,16 +25,16 @@ $Keys = @{
 
 If (($Keys[$OS_Version] | Measure-Object -Character).Characters -eq 29)
 {
-	If ((Get-WmiObject -Class Win32_ComputerSystem).PartOfDomain -eq $True) # Domain joined server
+	If ((Get-WmiObject -Class Win32_ComputerSystem).PartOfDomain -eq $True) # Domain
 	{
-		Write-Host "Windows versie: $OS_Version, Type: Domain, Key: $($Keys[$OS_Version]), installeren..." -ForegroundColor Yellow
+		Write-Host "Windows version: $OS_Version, Type: Domain, Key: $($Keys[$OS_Version]), install..." -ForegroundColor Yellow
 		cscript C:\Windows\System32\slmgr.vbs /ckms
 		cscript C:\Windows\System32\slmgr.vbs /ckms-domain
 		cscript C:\Windows\System32\slmgr.vbs /ipk $Keys[$OS_Version]
 	}
-	Else # DMZ server
+	Else # Workgroup
 	{
-		Write-Host "Windows versie: $OS_Version, Type: DMZ, Key: $($Keys[$OS_Version]), installeren..." -ForegroundColor Yellow
+		Write-Host "Windows version: $OS_Version, Type: Workgroup, Key: $($Keys[$OS_Version]), install..." -ForegroundColor Yellow
 		cscript C:\Windows\System32\slmgr.vbs /skms <kms:port>
 		cscript C:\Windows\System32\slmgr.vbs /ipk $Keys[$OS_Version]
 	}
@@ -43,6 +43,6 @@ If (($Keys[$OS_Version] | Measure-Object -Character).Characters -eq 29)
 }
 Else
 {
-	Write-Host "Key not found! Windows version: $OS_Version" -ForegroundColor Red
+	Write-Host "Windows key not found. Different kind of Windows? Current version: $OS_Version" -ForegroundColor Red
 }
 ```
